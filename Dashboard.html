@@ -1,31 +1,61 @@
+{% load static %}
+{% static 'images' as baseURL %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>Dashboard</title>
-        <link href="/Dasboard.css" rel="stylesheet" type="text/css">
+        <!--<link href="/Dasboard.css" rel="stylesheet" type="text/css">-->
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/Dasboard.css' %}">
+
     </head>
     <body>
         <div id="topbar">
-            <h1>Dashboard for covid care center</h1>
+            <h1>Dashboard for covid care center.</h1>
         </div>
         <table>
             <tr>
                 <td class="image-item">
-                    <img class="images" src="images\Guidelines.jfif" alt="guidelines"/>
+                    <div>
+                        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?adgroupsurvey={adgroupsurvey}&gclid=CjwKCAjw49qKBhAoEiwAHQVTo1HqhpUOBCkOW0cHQIA2wreiMhCuLr8t0H0Z_BXMrWp3wh--5IOnoxoCr00QAvD_BwE">
+                            <img class="images" src="{% static 'images/Guidelines.jpg' %}" alt="guidelines"/> </a>
+                        <p class="description">WHO Guidelines for protection against Covid-19</p>
+                    </div>
                 </td>
                 <td class="image-item">
-                    <img class="images" src="images\survey-image (1).jpg" alt="survey" />
+                    <div>
+                        <a href="survey"> <img class="images" src="{% static 'images/survey-image.jpg' %}" alt="survey" /> </a>
+
+                        <p class="description">Take the Covid-19 survey now!</p>
+                    </div>
                 </td>
                 <td class="image-item">
-                    <img class="images" src="images\oxygen.jpg" alt="oxygen" />
+                    <div>
+                        <a href=""> <img class="images" src="{% static 'images/oxygen.jpg' %}" alt="oxygen" /> </a>
+                        <p class="description">Oxygen Cylinder Status</p>
+                    </div>
                 </td>
             </tr>
             <tr>
-                <td colspan="2" class="image-item">
-                    <img class="images" src="images\beds (1).jpg" alt="beds" />
+
+
+
+                <td class="image-item">
+                    <div>
+                        <a href=""> <img class="images" src="{% static 'images/beds.jpg' %}" alt="beds" /> </a>
+                        <p class="description">Beds Availability</p>
+                    </div>
                 </td>
-                <td colspan="2" class="image-item">
-                    <img class="images" src="images\vaccine.jpg" alt="vaccination" />
+                <td class="image-item">
+                    <div>
+                        <a href="cases"> <img class="images" src="{% static 'images/counter.jpg' %}" alt="Covid Cases"/></a>
+                        <p class="description">Covid-19 Cases around the globe</p>
+                    </div>
+                </td>
+                <td class="image-item">
+                    <div>
+                        <a href=""> <img class="images" src="{% static 'images/vaccine.jpg' %}" alt="vaccination" /> </a>
+                        <p class="description">Vaccination Count</p>
+                    </div>
                 </td>
             </tr>
         </table>

@@ -10,20 +10,21 @@
 
     <title>COVID-19 Probability Detector</title>
   </head>
-  <body> 
+  <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
         <a class="navbar-brand">Survey For Infection Probability</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+
       </nav>
 
 
       <div class="container">
           <h2 class="text-center mt-3">Coronavirus Probability Detector</h2>
-          <form action="/" method="POST">
+          <form action="/survey" method="POST">
+            {% csrf_token %}
             <div class="form-group">
               <label for="fever">Enter fever Value</label>
               <input type="text" class="form-control" id="fever" name="fever" placeholder="Enter Fever Value">
@@ -33,31 +34,31 @@
               <label for="fever">Enter Age Value</label>
               <input type="text" class="form-control" id="age" name="age" placeholder="Enter you Age">
             </div>
-             
+
             <div class="form-group">
               <label for="pain">Body Pain</label>
               <select  class="form-control custom-select" name="pain" id="pain">
-                <option value="0">No Pain</option> 
-                <option value="1">Severe Pain</option> 
+                <option value="0">No Pain</option>
+                <option value="1">Severe Pain</option>
               </select>
             </div>
             <div class="form-group">
               <label for="runnyNose">Runny Nose</label>
               <select  class="form-control custom-select" name="runnyNose" id="runnyNose">
-                <option value="0">Yes</option> 
-                <option value="1">No</option> 
+                <option value="0">Yes</option>
+                <option value="1">No</option>
               </select>
             </div>
             <div class="form-group">
               <label for="diffBreath">Breathing Difficulty</label>
               <select  class="form-control custom-select" name="diffBreath" id="diffBreath">
-                <option value="-1">No Difficulty</option> 
-                <option value="0">Little Difficulty</option> 
-                <option value="1">Severe Difficulty</option> 
+                <option value="-1">No Difficulty</option>
+                <option value="0">Little Difficulty</option>
+                <option value="1">Severe Difficulty</option>
               </select>
             </div>
 
-         
+
             <button class="btn btn-success">Submit</button>
           </form>
       </div>

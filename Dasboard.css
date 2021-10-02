@@ -14,7 +14,7 @@ table{
     margin-top: 30px;
 }
 #topbar{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 3px;
 }
 .images{
@@ -25,4 +25,10 @@ table{
 .image-item{
     border-radius: 25px;
     padding: 24px;
+}
+.description{
+    font-weight: bold;
+    font-family: Papyrus;
+    text-align: center;
+    font-size: 18px;
 }
